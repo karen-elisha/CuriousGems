@@ -7,5 +7,6 @@ Modules:
     loader          - CSV dataset loader and DataStore builder
     relationships   - NetworkX relationship graph builder
     digital_twin    - Central FinancialDigitalTwin orchestrator
+    event_engine    - Immutable event sourcing, history, replay, timelines, snapshots
     runner          - Boot script to load, build, verify, and demonstrate
 """
