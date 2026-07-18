@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { UploadCloud, CheckCircle2, Loader2, Database } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
 import apiClient from '../api/client';
+import { motion } from 'framer-motion';
 
 const REQUIRED_FILES = [
   'employees.csv',
@@ -13,7 +13,6 @@ const REQUIRED_FILES = [
 ];
 
 export function Setup() {
-  const navigate = useNavigate();
   const [files, setFiles] = useState<Record<string, File>>({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -56,41 +55,56 @@ export function Setup() {
   };
 
   return (
-    <div className="min-h-screen bg-[var(--bg-background)] flex flex-col items-center justify-center p-6 relative overflow-hidden">
+    <div className="min-h-screen bg-background flex flex-col items-center justify-center p-6 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(6,182,212,0.15),transparent_50%)] pointer-events-none"></div>
       
-      <div className="w-full max-w-2xl bg-[var(--bg-surface)] border border-[var(--border-surface)] rounded-xl shadow-lg p-10 z-10">
-        <div className="flex flex-col items-center text-center mb-8">
-          <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mb-6 border border-[var(--border-surface)] shadow-sm">
-            <Database className="w-8 h-8 text-[var(--color-primary)]" />
-          </div>
-          <h1 className="text-3xl font-bold text-[var(--text-main)] mb-2 tracking-tight">Test Case Ingestion</h1>
-          <p className="text-[var(--text-muted)]">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="w-full max-w-2xl glass-panel p-10 z-10 relative overflow-hidden"
+      >
+        <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-violet-500/10 rounded-full blur-3xl -ml-32 -mb-32 pointer-events-none"></div>
+
+        <div className="flex flex-col items-center text-center mb-8 relative z-10">
+          <motion.div 
+            initial={{ scale: 0.9 }}
+            animate={{ scale: 1 }}
+            className="w-16 h-16 bg-cyan-500/10 rounded-2xl flex items-center justify-center mb-6 border border-cyan-500/20 shadow-glow-primary"
+          >
+            <Database className="w-8 h-8 text-cyan-400 drop-shadow-[0_0_8px_rgba(6,182,212,0.8)]" />
+          </motion.div>
+          <h1 className="text-3xl font-bold text-text mb-2 font-display tracking-tight">Test Case Ingestion</h1>
+          <p className="text-textMuted text-lg">
             Upload your structured datasets to initialize the validation engine.
           </p>
         </div>
 
-        <div className="bg-gray-50 border-2 border-dashed border-[var(--border-surface)] rounded-xl p-8 mb-8 text-center relative hover:bg-gray-100 transition-colors">
+        <div className="bg-surface/30 border-2 border-dashed border-surfaceBorder rounded-xl p-8 mb-8 text-center relative hover:bg-surfaceHover/50 transition-colors group cursor-pointer">
           <input 
             type="file" 
             multiple 
             accept=".csv"
             onChange={handleFileChange}
-            className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+            className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-20"
           />
-          <UploadCloud className="w-10 h-10 text-[var(--text-muted)] mx-auto mb-4" />
-          <p className="font-medium text-[var(--text-main)] mb-1">Drag & Drop CSV files here</p>
-          <p className="text-sm text-[var(--text-muted)]">or click to browse</p>
+          <UploadCloud className="w-12 h-12 text-cyan-400 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 drop-shadow-[0_0_8px_rgba(6,182,212,0.5)]" />
+          <p className="font-bold text-text mb-1 text-lg">Drag & Drop CSV files here</p>
+          <p className="text-sm text-textMuted">or click to browse</p>
         </div>
 
-        <div className="grid grid-cols-2 gap-3 mb-8">
+        <div className="grid grid-cols-2 gap-4 mb-8">
           {REQUIRED_FILES.map(name => (
-            <div key={name} className="flex items-center gap-3 p-3 bg-white border border-[var(--border-surface)] rounded-lg shadow-sm">
+            <div key={name} className="flex items-center gap-3 p-4 glass-card group">
               {files[name] ? (
-                <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+                <div className="relative">
+                  <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 drop-shadow-[0_0_8px_rgba(52,211,153,0.8)]" />
+                  <div className="absolute inset-0 bg-emerald-400/20 rounded-full animate-ping opacity-50"></div>
+                </div>
               ) : (
-                <div className="w-5 h-5 rounded-full border-2 border-[var(--border-surface)] shrink-0 bg-gray-50" />
+                <div className="w-5 h-5 rounded-full border-2 border-surfaceBorder shrink-0 bg-surface/50" />
               )}
-              <span className={`text-sm font-mono truncate ${files[name] ? 'text-[var(--text-main)] font-medium' : 'text-[var(--text-muted)]'}`}>
+              <span className={`text-sm font-mono truncate transition-colors ${files[name] ? 'text-cyan-300 font-bold' : 'text-textMuted'}`}>
                 {name}
               </span>
             </div>
@@ -98,20 +112,27 @@ export function Setup() {
         </div>
 
         {error && (
-          <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm mb-6 text-center font-medium">
+          <motion.div 
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            className="p-4 bg-rose-500/10 border border-rose-500/20 rounded-xl text-rose-400 text-sm mb-6 text-center font-bold tracking-wide"
+          >
             {error}
-          </div>
+          </motion.div>
         )}
 
         <button 
           onClick={handleInitialize}
           disabled={loading || Object.keys(files).length !== REQUIRED_FILES.length}
-          className="w-full py-4 text-lg bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] text-white font-medium rounded-xl transition-colors shadow-sm flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="btn-primary w-full py-4 text-lg font-bold flex justify-center items-center gap-3 relative overflow-hidden group disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : null}
-          {loading ? 'Booting Validation Engine...' : 'Execute Test Cases'}
+          {loading && <div className="absolute inset-0 bg-cyan-400/20 animate-pulse"></div>}
+          <div className="relative z-10 flex items-center gap-2">
+            {loading ? <Loader2 className="w-6 h-6 animate-spin drop-shadow-[0_0_8px_rgba(6,182,212,0.8)]" /> : null}
+            {loading ? 'Booting Validation Engine...' : 'Execute Test Cases'}
+          </div>
         </button>
-      </div>
+      </motion.div>
     </div>
   );
 }

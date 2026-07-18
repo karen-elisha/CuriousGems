@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { ReactFlow, MiniMap, Controls, Background, useNodesState, useEdgesState } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import { motion } from 'framer-motion';
@@ -29,8 +29,8 @@ const initialEdges = [
 ];
 
 export function DigitalTwinExplorer() {
-  const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
-  const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
+  const [nodes, , onNodesChange] = useNodesState(initialNodes);
+  const [edges, , onEdgesChange] = useEdgesState(initialEdges);
 
   return (
     <div className="h-[calc(100vh-4rem)] flex flex-col space-y-6">

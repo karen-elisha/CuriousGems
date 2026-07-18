@@ -1,4 +1,3 @@
-import React from 'react';
 import { FileText, Download } from 'lucide-react';
 
 export function Reports() {

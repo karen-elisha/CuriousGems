@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { ShieldCheck, ShieldAlert, ShieldX } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { ShieldCheck, ShieldAlert } from 'lucide-react';
 import { motion } from 'framer-motion';
 import apiClient from '../api/client';
 

@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Database, AlertTriangle, CheckCircle, ShieldAlert, FileText, ArrowRight, Activity } from 'lucide-react';
+import { Database, AlertTriangle, CheckCircle, ShieldAlert, FileText, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import apiClient from '../api/client';
 
