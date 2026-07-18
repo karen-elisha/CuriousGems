@@ -14,5 +14,6 @@ Modules:
     timeline_manager- State management and deep comparison of twin timelines
     evidence_graph  - Subgraph extraction and React Flow JSON exporter
     gemma_service   - LLM integration layer for investigation and reporting
+    prompt_builder  - Token-optimized context generation for Gemma
     runner          - Boot script to load, build, verify, and demonstrate
 """
