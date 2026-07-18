@@ -8,5 +8,6 @@ Modules:
     relationships   - NetworkX relationship graph builder
     digital_twin    - Central FinancialDigitalTwin orchestrator
     event_engine    - Immutable event sourcing, history, replay, timelines, snapshots
+    rule_engine     - Business logic and compliance rule evaluation
     runner          - Boot script to load, build, verify, and demonstrate
 """
