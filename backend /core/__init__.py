@@ -11,5 +11,6 @@ Modules:
     rule_engine     - Business logic and compliance rule evaluation
     risk_engine     - Hierarchical risk propagation engine
     simulation_engine- What-If scenario testing with immutable branched states
+    timeline_manager- State management and deep comparison of twin timelines
     runner          - Boot script to load, build, verify, and demonstrate
 """
