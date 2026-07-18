@@ -6,41 +6,45 @@
   body {
     @apply bg-background text-text font-sans antialiased;
     background-image: 
-      radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
-      radial-gradient(at 50% 0%, hsla(225,39%,30%,0.2) 0, transparent 50%), 
-      radial-gradient(at 100% 0%, hsla(339,49%,30%,0.1) 0, transparent 50%);
+      radial-gradient(circle at 15% 50%, rgba(6, 182, 212, 0.08) 0%, transparent 40%),
+      radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.08) 0%, transparent 40%);
     background-attachment: fixed;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
   }
 }
 
 @layer components {
   .glass-panel {
-    @apply bg-surface backdrop-blur-md border border-surfaceBorder rounded-2xl shadow-xl;
+    @apply bg-surface backdrop-blur-xl border border-surfaceBorder rounded-2xl shadow-xl shadow-black/20;
   }
   
   .glass-card {
-    @apply bg-surface backdrop-blur-sm border border-surfaceBorder rounded-xl shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-primary/50;
+    @apply bg-surface backdrop-blur-md border border-surfaceBorder rounded-xl shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-glow-primary;
   }
   
   .btn-primary {
-    @apply px-4 py-2 bg-primary hover:bg-blue-600 text-white rounded-lg font-medium transition-colors shadow-lg shadow-primary/20;
+    @apply px-4 py-2 bg-primary/90 hover:bg-primary text-white rounded-lg font-medium transition-all duration-300 shadow-glow-primary hover:shadow-[0_0_25px_rgba(6,182,212,0.6)];
   }
   
   .btn-secondary {
-    @apply px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white border border-surfaceBorder rounded-lg font-medium transition-colors;
+    @apply px-4 py-2 bg-surfaceHover hover:bg-slate-700/80 text-white border border-surfaceBorder rounded-lg font-medium transition-colors;
   }
   
   .input-field {
-    @apply w-full px-4 py-2 bg-slate-800/50 border border-surfaceBorder rounded-lg text-text focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent transition-all;
+    @apply w-full px-4 py-2 bg-surfaceHover border border-surfaceBorder rounded-lg text-text focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent transition-all;
   }
 }
 
-/* React Flow custom styles */
+/* React Flow custom styles to fix text visibility in dark mode */
 .react-flow__node {
   border-radius: 8px;
+  color: #F8FAFC !important; /* Ensure text is visible */
 }
 .react-flow__handle {
   width: 8px;
   height: 8px;
-  background-color: #94a3b8;
+  background-color: #06B6D4;
+  border: 2px solid #F8FAFC;
 }
