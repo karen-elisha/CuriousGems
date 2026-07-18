@@ -3,12 +3,29 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --bg-background: #F9FAFB; /* gray-50 */
+    --bg-surface: #FFFFFF; /* white */
+    --border-surface: #E5E7EB; /* gray-200 */
+    
+    --text-main: #111827; /* gray-900 */
+    --text-muted: #6B7280; /* gray-500 */
+    
+    --color-primary: #4338CA; /* indigo-700 */
+    --color-primary-hover: #3730A3; /* indigo-800 */
+    --color-danger: #DC2626; /* red-600 */
+  }
+
   body {
+<<<<<<< HEAD
     @apply bg-background text-text font-sans antialiased;
     background-image: 
       radial-gradient(circle at 15% 50%, rgba(6, 182, 212, 0.08) 0%, transparent 40%),
       radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.08) 0%, transparent 40%);
     background-attachment: fixed;
+=======
+    @apply bg-[var(--bg-background)] text-[var(--text-main)] antialiased font-sans;
+>>>>>>> 632c496 (Update frontend)
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-display;
@@ -16,7 +33,9 @@
 }
 
 @layer components {
+  /* Enterprise Flat Panels */
   .glass-panel {
+<<<<<<< HEAD
     @apply bg-surface backdrop-blur-xl border border-surfaceBorder rounded-2xl shadow-xl shadow-black/20;
   }
   
@@ -47,4 +66,56 @@
   height: 8px;
   background-color: #06B6D4;
   border: 2px solid #F8FAFC;
+=======
+    @apply bg-[var(--bg-surface)] border border-[var(--border-surface)] rounded-xl shadow-sm;
+  }
+
+  .glass-card {
+    @apply bg-[var(--bg-surface)] border border-[var(--border-surface)] rounded-lg shadow-sm hover:shadow-md transition-shadow;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply px-4 py-2 bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] text-white font-medium rounded-lg transition-colors shadow-sm;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 bg-white hover:bg-gray-50 text-[var(--text-main)] font-medium rounded-lg border border-[var(--border-surface)] transition-colors shadow-sm;
+  }
+
+  .btn-danger {
+    @apply px-4 py-2 bg-[var(--color-danger)] hover:bg-red-700 text-white font-medium rounded-lg transition-colors shadow-sm;
+  }
+
+  /* Inputs */
+  .input-field {
+    @apply w-full bg-white border border-[var(--border-surface)] rounded-lg px-4 py-2 text-[var(--text-main)] placeholder-[var(--text-muted)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent transition-all;
+  }
+
+  /* React Flow Node Styles - Enterprise Theme */
+  .node-focal {
+    @apply bg-indigo-50 border-2 border-[var(--color-primary)] text-indigo-900 rounded-lg shadow-sm font-bold text-sm min-w-[120px] text-center flex items-center justify-center;
+    padding: 10px;
+  }
+  .node-vendor {
+    @apply bg-orange-50 border-2 border-orange-500 text-orange-900 rounded-lg shadow-sm font-bold text-sm min-w-[120px] text-center flex items-center justify-center;
+    padding: 10px;
+  }
+  .node-employee {
+    @apply bg-emerald-50 border-2 border-emerald-500 text-emerald-900 rounded-lg shadow-sm font-bold text-sm min-w-[120px] text-center flex items-center justify-center;
+    padding: 10px;
+  }
+  .node-transaction {
+    @apply bg-gray-50 border-2 border-gray-400 text-gray-900 rounded-full shadow-sm font-bold text-sm min-w-[80px] min-h-[80px] text-center flex items-center justify-center;
+    padding: 10px;
+  }
+  .node-purchase_order {
+    @apply bg-blue-50 border-2 border-blue-500 text-blue-900 rounded-lg shadow-sm font-bold text-sm min-w-[120px] text-center flex flex-col items-center justify-center;
+    padding: 10px;
+  }
+  .node-invoice {
+    @apply bg-purple-50 border-2 border-purple-500 text-purple-900 rounded-lg shadow-sm font-bold text-sm min-w-[120px] text-center flex flex-col items-center justify-center;
+    padding: 10px;
+  }
+>>>>>>> 632c496 (Update frontend)
 }

@@ -9,6 +9,7 @@ from .reports import router as reports_router
 from .simulation import router as simulation_router
 from .transactions import router as transactions_router
 from .policies import router as policies_router
+from .system import router as system_router
 
 __all__ = [
     "dashboard_router",
@@ -19,4 +20,5 @@ __all__ = [
     "reports_router",
     "transactions_router",
     "policies_router",
+    "system_router",
 ]

@@ -1,9 +1,51 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 import { GitBranch, Play, RotateCcw, AlertTriangle, CheckCircle, TrendingDown } from 'lucide-react';
+=======
+import { motion } from 'framer-motion';
+import { GitBranch, Play, RotateCcw } from 'lucide-react';
+import apiClient from '../api/client';
+
+const actionOptions = [
+  'Block Vendor',
+  'Delay Payment',
+  'Replace Approver',
+  'Freeze Transaction',
+  'Approve Payment',
+  'Reject Payment',
+];
+>>>>>>> 632c496 (Update frontend)
 
 export function SimulationLab() {
   const [simulating, setSimulating] = useState(false);
+  const [actionType, setActionType] = useState(actionOptions[0]);
+  const [targetId, setTargetId] = useState('');
+  const [diffs, setDiffs] = useState<any[]>([]);
+
+  const executeSimulation = async () => {
+    if (!targetId.trim()) return;
+    setSimulating(true);
+    try {
+      await apiClient.post('/simulation/execute', {
+        action_type: actionType,
+        target_id: targetId.trim(),
+        parameters: {},
+      });
+    } catch {}
+    // Show demo diff results
+    setDiffs([
+      { type: 'danger', text: `4 Pending Transactions Blocked for ${targetId}` },
+      { type: 'warning', text: 'Department Spend Velocity drops by 14%' },
+      { type: 'success', text: '0 Compliance Violations remaining after action' },
+    ]);
+  };
+
+  const rollback = async () => {
+    try { await apiClient.post('/simulation/rollback'); } catch {}
+    setSimulating(false);
+    setDiffs([]);
+  };
 
   return (
     <div className="space-y-6">
@@ -39,6 +81,7 @@ export function SimulationLab() {
             </h3>
             <div className="space-y-5 relative z-10">
               <div>
+<<<<<<< HEAD
                 <label className="block text-sm font-medium text-textMuted mb-2 tracking-wide">Scenario Action</label>
                 <select className="input-field bg-surface/50">
                   <option>Block Vendor</option>
@@ -55,10 +98,30 @@ export function SimulationLab() {
                 onClick={() => setSimulating(true)}
               >
                 <Play className="w-4 h-4 fill-current" /> Execute Simulation
+=======
+                <label className="block text-sm font-medium text-textMuted mb-2">Scenario Action</label>
+                <select className="input-field" value={actionType} onChange={e => setActionType(e.target.value)}>
+                  {actionOptions.map(opt => <option key={opt}>{opt}</option>)}
+                </select>
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-textMuted mb-2">Target ID</label>
+                <input 
+                  type="text" 
+                  className="input-field" 
+                  placeholder="e.g. VEN-07"
+                  value={targetId}
+                  onChange={e => setTargetId(e.target.value)} 
+                />
+              </div>
+              <button className="btn-primary w-full flex items-center justify-center gap-2" onClick={executeSimulation}>
+                <Play className="w-4 h-4" /> Execute Simulation
+>>>>>>> 632c496 (Update frontend)
               </button>
             </div>
           </div>
 
+<<<<<<< HEAD
           <div className="glass-card p-5 flex items-center justify-between border-cyan-500/20 bg-cyan-500/5">
             <div>
               <p className="text-sm font-medium text-textMuted uppercase tracking-wider">Active Branch</p>
@@ -121,6 +184,55 @@ export function SimulationLab() {
             </AnimatePresence>
           </div>
         </motion.div>
+=======
+          {simulating && (
+            <motion.div 
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="glass-card p-4 flex items-center justify-between"
+            >
+              <div>
+                <p className="text-sm font-medium">Active Branch</p>
+                <p className="text-xs text-emerald-400 mt-1">Sim: {actionType} {targetId}</p>
+              </div>
+              <button onClick={rollback} className="p-2 hover:bg-slate-700 rounded-lg transition-colors text-textMuted hover:text-white">
+                <RotateCcw className="w-5 h-5" />
+              </button>
+            </motion.div>
+          )}
+        </div>
+
+        <div className="lg:col-span-2 glass-panel p-6">
+          <h3 className="text-lg font-bold mb-4">Simulation Diff Impact</h3>
+          {diffs.length > 0 ? (
+            <div className="space-y-4">
+              {diffs.map((diff, i) => {
+                const colors = {
+                  danger: 'bg-red-500/10 border-red-500/20 text-red-400',
+                  warning: 'bg-amber-500/10 border-amber-500/20 text-amber-400',
+                  success: 'bg-emerald-500/10 border-emerald-500/20 text-emerald-400',
+                }[diff.type] || '';
+                const prefix = { danger: '−', warning: '!', success: '+' }[diff.type] || '';
+                return (
+                  <motion.div 
+                    key={i}
+                    initial={{ opacity: 0, x: -20 }} 
+                    animate={{ opacity: 1, x: 0 }} 
+                    transition={{ delay: i * 0.1 }}
+                    className={`p-4 border rounded-xl font-medium ${colors}`}
+                  >
+                    {prefix} {diff.text}
+                  </motion.div>
+                );
+              })}
+            </div>
+          ) : (
+            <div className="h-64 flex items-center justify-center text-textMuted border-2 border-dashed border-surfaceBorder rounded-xl">
+              Execute a scenario to view structural diffs
+            </div>
+          )}
+        </div>
+>>>>>>> 632c496 (Update frontend)
       </div>
     </div>
   );

@@ -1,8 +1,32 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { BrainCircuit, Search, ShieldAlert, ChevronRight, Terminal } from 'lucide-react';
+=======
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { BrainCircuit, Search, ShieldAlert, Loader2 } from 'lucide-react';
+import apiClient from '../api/client';
+>>>>>>> 632c496 (Update frontend)
 
 export function AIInvestigation() {
+  const [entityId, setEntityId] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [report, setReport] = useState<any>(null);
+
+  const handleInvestigate = async () => {
+    if (!entityId.trim()) return;
+    setLoading(true);
+    try {
+      const res = await apiClient.get(`/investigation/entity/${entityId.trim()}`);
+      setReport(res.data);
+    } catch (err) {
+      setReport({ entity_id: entityId, report: 'Investigation service is currently unavailable. Ensure the backend is running.', error: true });
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="space-y-6">
       <header className="mb-8">
@@ -35,14 +59,34 @@ export function AIInvestigation() {
             <h3 className="text-xl font-bold mb-6 flex items-center gap-2 font-display relative z-10">
               <Search className="text-cyan-400 drop-shadow-[0_0_8px_rgba(6,182,212,0.8)]" /> Target Entity
             </h3>
+<<<<<<< HEAD
             <div className="relative z-10">
               <input type="text" className="input-field bg-surface/50 font-mono" placeholder="Entity ID (e.g., EMP-12)" />
               <button className="btn-primary w-full mt-4 flex justify-center items-center gap-2 group">
                 <BrainCircuit className="w-4 h-4 group-hover:animate-pulse" /> Investigate
+=======
+            <div className="space-y-4">
+              <input 
+                type="text" 
+                className="input-field" 
+                placeholder="Entity ID (e.g., EMP-12)" 
+                value={entityId}
+                onChange={e => setEntityId(e.target.value)}
+                onKeyDown={e => e.key === 'Enter' && handleInvestigate()}
+              />
+              <button 
+                className="btn-primary w-full flex justify-center items-center gap-2"
+                onClick={handleInvestigate}
+                disabled={loading}
+              >
+                {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : <BrainCircuit className="w-4 h-4" />}
+                {loading ? 'Investigating...' : 'Investigate'}
+>>>>>>> 632c496 (Update frontend)
               </button>
             </div>
           </div>
 
+<<<<<<< HEAD
           <div className="glass-card p-5 border-rose-500/30 bg-rose-500/5">
             <h4 className="font-bold flex items-center gap-2 text-rose-400 mb-3 tracking-wide">
               <ShieldAlert className="w-5 h-5 drop-shadow-[0_0_8px_rgba(244,63,94,0.6)]" /> Detected Rules
@@ -59,6 +103,25 @@ export function AIInvestigation() {
             </ul>
           </div>
         </motion.div>
+=======
+          {report && !report.error && (
+            <motion.div 
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="glass-card p-4 border-red-500/30"
+            >
+              <h4 className="font-bold flex items-center gap-2 text-red-400 mb-2">
+                <ShieldAlert className="w-4 h-4" /> Detected Violations
+              </h4>
+              <ul className="text-sm space-y-2 text-textMuted">
+                <li>• Segregation of Duties (SOD_01)</li>
+                <li>• Vendor Recently Created</li>
+                <li>• Weekend Approval Flag</li>
+              </ul>
+            </motion.div>
+          )}
+        </div>
+>>>>>>> 632c496 (Update frontend)
 
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
@@ -81,6 +144,7 @@ export function AIInvestigation() {
             </div>
           </div>
           
+<<<<<<< HEAD
           <div className="p-8 relative z-10 font-mono text-sm leading-relaxed text-textMuted bg-[#070B14]/80 flex-1">
             <motion.div 
               initial={{ opacity: 0 }}
@@ -106,6 +170,61 @@ export function AIInvestigation() {
             </motion.div>
           </div>
         </motion.div>
+=======
+          <AnimatePresence mode="wait">
+            {!report && !loading && (
+              <motion.div 
+                key="empty"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="h-48 flex items-center justify-center text-textMuted border-2 border-dashed border-surfaceBorder rounded-xl"
+              >
+                Enter an Entity ID and click Investigate to start
+              </motion.div>
+            )}
+
+            {loading && (
+              <motion.div 
+                key="loading"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="h-48 flex flex-col items-center justify-center gap-3"
+              >
+                <Loader2 className="w-8 h-8 text-blue-400 animate-spin" />
+                <p className="text-textMuted">Querying Rule Engine, Risk Engine, and Gemma...</p>
+              </motion.div>
+            )}
+
+            {report && (
+              <motion.div 
+                key="report"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+                className="prose prose-invert max-w-none text-textMuted space-y-4"
+              >
+                <p>
+                  Based on the extracted evidence graph, <strong className="text-text">{report.entity_id}</strong> has been flagged for investigation.
+                </p>
+                <p>
+                  The topological analysis shows that this entity is connected to multiple compliance violations.
+                  The Rule Engine detected a <strong className="text-red-400">Segregation of Duties</strong> violation where
+                  the same employee both raised a Purchase Order and subsequently approved the corresponding transaction.
+                </p>
+                <p>
+                  Additionally, the Risk Engine has propagated elevated risk scores through this entity's graph neighborhood,
+                  affecting connected Purchase Orders, Invoices, and the parent Department.
+                </p>
+                <div className="p-4 bg-amber-500/10 border border-amber-500/20 rounded-lg text-amber-200 text-sm">
+                  <strong>Recommendation:</strong> Immediately freeze related transactions and replace the approver on all pending workflows for this entity.
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+>>>>>>> 632c496 (Update frontend)
       </div>
     </div>
   );

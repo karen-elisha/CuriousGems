@@ -7,6 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
+<<<<<<< HEAD
         background: '#070B14', // Very deep blue-black
         surface: 'rgba(15, 23, 42, 0.4)', // Ultra-transparent slate for glass
         surfaceHover: 'rgba(30, 41, 59, 0.6)',
@@ -17,6 +18,15 @@ export default {
         danger: '#F43F5E', // Rose 500
         text: '#F8FAFC',
         textMuted: '#94A3B8',
+=======
+        background: 'var(--bg-background)',
+        surface: 'var(--bg-surface)',
+        surfaceBorder: 'var(--border-surface)',
+        text: 'var(--text-main)',
+        textMuted: 'var(--text-muted)',
+        primary: 'var(--color-primary)',
+        danger: 'var(--color-danger)',
+>>>>>>> 632c496 (Update frontend)
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
