@@ -12,6 +12,8 @@ from .routers import (
     investigation_router,
     reports_router,
     simulation_router,
+    transactions_router,
+    policies_router,
 )
 
 app = FastAPI(
@@ -36,6 +38,8 @@ app.include_router(investigation_router)
 app.include_router(graph_router)
 app.include_router(chat_router)
 app.include_router(reports_router)
+app.include_router(transactions_router)
+app.include_router(policies_router)
 
 @app.get("/health", tags=["System"])
 async def health_check():
