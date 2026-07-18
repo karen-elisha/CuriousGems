@@ -12,5 +12,7 @@ Modules:
     risk_engine     - Hierarchical risk propagation engine
     simulation_engine- What-If scenario testing with immutable branched states
     timeline_manager- State management and deep comparison of twin timelines
+    evidence_graph  - Subgraph extraction and React Flow JSON exporter
+    gemma_service   - LLM integration layer for investigation and reporting
     runner          - Boot script to load, build, verify, and demonstrate
 """
