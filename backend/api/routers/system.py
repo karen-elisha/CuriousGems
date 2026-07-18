@@ -47,8 +47,8 @@ async def upload_datasets(
 
     # Boot the Twin and attach to global state
     try:
-        twin = FinancialDigitalTwin.boot(DATA_DIR)
-        request.app.state.twin = twin
-        return {"status": "success", "message": "Digital Twin initialized successfully.", "health": twin.health()}
+        from api.main import init_twin_and_engines
+        init_twin_and_engines(request.app, DATA_DIR)
+        return {"status": "success", "message": "Digital Twin and all verification engines initialized successfully.", "health": request.app.state.twin.health()}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to initialize twin from uploaded data: {str(e)}")

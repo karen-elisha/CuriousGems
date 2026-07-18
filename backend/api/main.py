@@ -38,38 +38,21 @@ logging.basicConfig(
 )
 
 
-@asynccontextmanager
-async def lifespan(app: FastAPI):
-    """
-    Boot the Financial Digital Twin and all singleton backend engines.
-    Engines are stored on app.state so every router can access them
-    via the dependency injection helpers in api/dependencies.py.
-    """
-    logger.info("═" * 60)
-    logger.info("  VeriGem API — Boot Sequence Starting")
-    logger.info("═" * 60)
-
-    # 1. Locate datasets
-    backend_dir = Path(__file__).resolve().parent.parent
-    datasets_dir = backend_dir / "datasets" / "VeriGem_Datasets"
-    if not datasets_dir.is_dir():
-        logger.critical("Datasets directory not found: %s", datasets_dir)
-        raise FileNotFoundError(f"Datasets directory not found: {datasets_dir}")
-
-    # 2. Boot the Digital Twin (loads all CSVs + builds graph)
+def init_twin_and_engines(app: FastAPI, datasets_dir: str) -> None:
+    """Boot the Financial Digital Twin and all singleton engines, attaching them to app.state."""
     logger.info("Booting Financial Digital Twin from: %s", datasets_dir)
     twin = FinancialDigitalTwin.boot(str(datasets_dir))
 
-    # 3. Instantiate the deterministic engines
+    # Instantiate the deterministic engines
     rule_engine = RuleEngine()
     risk_engine = RiskPropagationEngine(twin.store)
     event_engine = EventEngine()
     timeline_manager = TimelineManager(twin)
 
-    # 4. Instantiate the Gemma AI service (singleton — client created once)
+    # Instantiate the Gemma AI service (singleton — client created once)
     gemma_service = GemmaService()
 
-    # 5. Instantiate the orchestrating investigation service
+    # Instantiate the orchestrating investigation service
     investigation_service = InvestigationService(
         twin=twin,
         rule_engine=rule_engine,
@@ -79,7 +62,7 @@ async def lifespan(app: FastAPI):
         gemma_service=gemma_service,
     )
 
-    # 6. Attach every singleton to application state
+    # Attach every singleton to application state
     app.state.twin = twin
     app.state.rule_engine = rule_engine
     app.state.risk_engine = risk_engine
@@ -88,10 +71,42 @@ async def lifespan(app: FastAPI):
     app.state.gemma_service = gemma_service
     app.state.investigation_service = investigation_service
 
-    health = twin.health()
-    logger.info("Digital Twin ready — %d entities, %d nodes, %d edges",
-                health["total_entities"], health["graph_nodes"], health["graph_edges"])
-    logger.info("GemmaService mode: %s", "MOCK" if gemma_service.is_mock else "LIVE")
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    """
+    Boot the Financial Digital Twin and all singleton backend engines if dataset exists.
+    If datasets do not exist, initialize state variables to None so they can be
+    booted dynamically via setup upload.
+    """
+    logger.info("═" * 60)
+    logger.info("  VeriGem API — Boot Sequence Starting")
+    logger.info("═" * 60)
+
+    # Initialize state variables to None to prevent AttributeError in dependency resolution
+    app.state.twin = None
+    app.state.rule_engine = None
+    app.state.risk_engine = None
+    app.state.event_engine = None
+    app.state.timeline_manager = None
+    app.state.gemma_service = None
+    app.state.investigation_service = None
+
+    # 1. Locate datasets
+    backend_dir = Path(__file__).resolve().parent.parent
+    datasets_dir = backend_dir / "datasets" / "VeriGem_Datasets"
+    if datasets_dir.is_dir():
+        try:
+            init_twin_and_engines(app, str(datasets_dir))
+            health = app.state.twin.health()
+            logger.info("Digital Twin ready — %d entities, %d nodes, %d edges",
+                        health["total_entities"], health["graph_nodes"], health["graph_edges"])
+            logger.info("GemmaService mode: %s", "MOCK" if app.state.gemma_service.is_mock else "LIVE")
+        except Exception as e:
+            logger.error("Failed to auto-boot twin: %s", e)
+    else:
+        logger.warning("Datasets directory '%s' not found. Standing by for manual dataset upload.", datasets_dir)
+
     logger.info("═" * 60)
     logger.info("  VeriGem API is OPERATIONAL")
     logger.info("═" * 60)
