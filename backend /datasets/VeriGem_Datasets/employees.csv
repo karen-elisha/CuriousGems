@@ -1,0 +1,151 @@
+employee_id,employee_name,department,designation,approval_level,max_approval_limit_inr,email,phone,city,date_of_joining,employment_status,reporting_manager_id
+EMP-20001,Rajesh Nair,Procurement,Senior Manager,L3,1000000,rajesh.nair@enterprise.co.in,+916400481269,Mumbai,2020-09-09,Active,EMP-20036
+EMP-20002,Kritika Pillai,Admin,Executive,L1,50000,kritika.pillai@enterprise.co.in,+918561510756,Ahmedabad,2016-08-13,Active,EMP-20132
+EMP-20003,Anjali Bansal,Compliance,Senior Executive,L1,100000,anjali.bansal@enterprise.co.in,+917034346051,Noida,2017-10-14,Active,EMP-20082
+EMP-20004,Suresh Nair,Finance,VP,L5,20000000,suresh.nair@enterprise.co.in,+918554894607,Mumbai,2018-07-09,Active,
+EMP-20005,Kritika Bansal,Finance,Senior Executive,L1,100000,kritika.bansal@enterprise.co.in,+916422739414,Pune,2020-03-06,Active,EMP-20098
+EMP-20006,Riya Saxena,Finance,Manager,L2,200000,riya.saxena@enterprise.co.in,+917016081215,Pune,2025-02-17,Resigned,EMP-20013
+EMP-20007,Sneha Pillai,Procurement,Senior Manager,L3,1000000,sneha.pillai@enterprise.co.in,+919334419416,Gurugram,2015-08-10,Active,EMP-20101
+EMP-20008,Reyansh Sharma,Operations,Director,L4,5000000,reyansh.sharma@enterprise.co.in,+917696414943,Hyderabad,2017-05-01,Active,EMP-20085
+EMP-20009,Rohan Iyer,IT,Senior Executive,L1,100000,rohan.iyer@enterprise.co.in,+918150598623,Pune,2017-04-20,Resigned,EMP-20079
+EMP-20010,Ananya Malhotra,Operations,Senior Manager,L3,1000000,ananya.malhotra@enterprise.co.in,+919725300226,Bengaluru,2017-03-10,Active,EMP-20008
+EMP-20011,Ramesh Chatterjee,IT,Senior Executive,L1,100000,ramesh.chatterjee@enterprise.co.in,+917349609368,Gurugram,2016-02-23,Active,EMP-20075
+EMP-20012,Krishna Trivedi,IT,Executive,L1,50000,krishna.trivedi@enterprise.co.in,+919470190546,Noida,2022-02-17,Active,EMP-20128
+EMP-20013,Sneha Naidu,Finance,Director,L4,5000000,sneha.naidu@enterprise.co.in,+916594882222,Delhi,2015-03-29,Active,EMP-20085
+EMP-20014,Preeti Kapoor,Finance,Executive,L1,50000,preeti.kapoor@enterprise.co.in,+919881158767,Noida,2020-02-20,Active,EMP-20090
+EMP-20015,Rohan Reddy,Operations,Executive,L1,50000,rohan.reddy@enterprise.co.in,+916801004080,Mumbai,2020-12-13,Active,EMP-20139
+EMP-20016,Rajesh Menon,Operations,Executive,L1,50000,rajesh.menon@enterprise.co.in,+917689259811,Delhi,2020-05-12,Active,EMP-20010
+EMP-20017,Manoj Kapoor,Procurement,Executive,L1,50000,manoj.kapoor@enterprise.co.in,+918189293498,Pune,2023-11-12,On Leave,EMP-20080
+EMP-20018,Ananya Chopra,Operations,Senior Executive,L1,100000,ananya.chopra@enterprise.co.in,+919403650979,Delhi,2019-02-07,Active,EMP-20139
+EMP-20019,Reyansh Gupta,Procurement,Senior Manager,L3,1000000,reyansh.gupta@enterprise.co.in,+918455432718,Delhi,2019-09-26,Active,EMP-20111
+EMP-20020,Riya Sharma,Compliance,Executive,L1,50000,riya.sharma@enterprise.co.in,+918949607992,Ahmedabad,2016-05-13,Active,EMP-20110
+EMP-20021,Diya Rao,Operations,Senior Executive,L1,100000,diya.rao@enterprise.co.in,+918890059524,Delhi,2022-07-16,Active,EMP-20008
+EMP-20022,Ashok Bansal,Compliance,Senior Executive,L1,100000,ashok.bansal@enterprise.co.in,+917430107210,Chennai,2017-07-29,Active,EMP-20146
+EMP-20023,Anil Pandey,Admin,Manager,L2,200000,anil.pandey@enterprise.co.in,+919033930821,Pune,2017-01-29,Active,EMP-20103
+EMP-20024,Suresh Singh,Finance,Manager,L2,200000,suresh.singh@enterprise.co.in,+916153260981,Delhi,2023-07-05,Active,EMP-20085
+EMP-20025,Ritu Singh,IT,Senior Executive,L1,100000,ritu.singh@enterprise.co.in,+919781558885,Delhi,2016-08-15,Active,EMP-20133
+EMP-20026,Kavya Gupta,Procurement,Senior Executive,L1,100000,kavya.gupta@enterprise.co.in,+916664077556,Mumbai,2026-02-16,Active,EMP-20109
+EMP-20027,Arjun Desai,Finance,Executive,L1,50000,arjun.desai@enterprise.co.in,+919434676601,Delhi,2017-04-20,Active,EMP-20090
+EMP-20028,Neha Agarwal,Finance,Manager,L2,200000,neha.agarwal@enterprise.co.in,+916662544181,Mumbai,2018-01-05,Resigned,EMP-20061
+EMP-20029,Sai Trivedi,Finance,Executive,L1,50000,sai.trivedi@enterprise.co.in,+917007236621,Chennai,2024-07-03,Active,EMP-20061
+EMP-20030,Vijay Patel,Legal,Senior Executive,L1,100000,vijay.patel@enterprise.co.in,+917431333391,Delhi,2025-07-11,Active,EMP-20067
+EMP-20031,Aarav Saxena,Finance,Executive,L1,50000,aarav.saxena@enterprise.co.in,+919782066194,Bengaluru,2023-06-05,Active,EMP-20028
+EMP-20032,Rajesh Rao,Compliance,Senior Executive,L1,100000,rajesh.rao@enterprise.co.in,+917707476209,Mumbai,2025-03-29,On Leave,EMP-20082
+EMP-20033,Ishaan Reddy,Finance,Executive,L1,50000,ishaan.reddy@enterprise.co.in,+917353112942,Kolkata,2024-06-15,Active,EMP-20046
+EMP-20034,Suresh Joshi,Procurement,Executive,L1,50000,suresh.joshi@enterprise.co.in,+918258744533,Mumbai,2016-01-09,Active,EMP-20001
+EMP-20035,Vihaan Bose,Admin,Executive,L1,50000,vihaan.bose@enterprise.co.in,+917364389147,Chennai,2017-06-03,Active,EMP-20132
+EMP-20036,Pooja Pillai,Procurement,Director,L4,5000000,pooja.pillai@enterprise.co.in,+917721918788,Noida,2020-04-01,Resigned,EMP-20111
+EMP-20037,Sai Das,Procurement,Executive,L1,50000,sai.das@enterprise.co.in,+918547039127,Hyderabad,2018-05-29,Resigned,EMP-20081
+EMP-20038,Aarav Sharma,Admin,Executive,L1,50000,aarav.sharma@enterprise.co.in,+917504601860,Bengaluru,2024-05-10,Active,EMP-20092
+EMP-20039,Kavya Bansal,Finance,Senior Executive,L1,100000,kavya.bansal@enterprise.co.in,+917028042714,Pune,2019-01-24,Active,EMP-20091
+EMP-20040,Neha Joshi,Procurement,Manager,L2,200000,neha.joshi@enterprise.co.in,+916913291003,Hyderabad,2025-09-19,Active,EMP-20111
+EMP-20041,Rajesh Desai,Procurement,Executive,L1,50000,rajesh.desai@enterprise.co.in,+916378941004,Delhi,2020-11-19,Active,EMP-20066
+EMP-20042,Krishna Das,Procurement,Senior Executive,L1,100000,krishna.das@enterprise.co.in,+919154374626,Ahmedabad,2025-06-03,Active,EMP-20054
+EMP-20043,Sunil Verma,Finance,Senior Manager,L3,1000000,sunil.verma@enterprise.co.in,+918339076927,Mumbai,2015-09-15,On Leave,EMP-20004
+EMP-20044,Ritu Trivedi,Legal,Executive,L1,50000,ritu.trivedi@enterprise.co.in,+919798140936,Ahmedabad,2020-03-22,Resigned,EMP-20064
+EMP-20045,Rohan Menon,Compliance,Senior Executive,L1,100000,rohan.menon@enterprise.co.in,+917200539892,Kolkata,2020-09-27,Active,EMP-20110
+EMP-20046,Sai Rao,Finance,Manager,L2,200000,sai.rao@enterprise.co.in,+917786182537,Chennai,2019-09-04,Active,EMP-20072
+EMP-20047,Priya Chatterjee,Procurement,Executive,L1,50000,priya.chatterjee@enterprise.co.in,+918952869148,Noida,2018-08-29,Active,EMP-20063
+EMP-20048,Manoj Trivedi,Legal,Executive,L1,50000,manoj.trivedi@enterprise.co.in,+916384279156,Mumbai,2021-07-16,Active,EMP-20150
+EMP-20049,Isha Verma,Procurement,Executive,L1,50000,isha.verma@enterprise.co.in,+916843600444,Delhi,2022-04-23,On Leave,EMP-20116
+EMP-20050,Sunil Bansal,Operations,Executive,L1,50000,sunil.bansal@enterprise.co.in,+918407840786,Delhi,2019-08-06,Resigned,EMP-20139
+EMP-20051,Sunil Desai,Legal,Senior Executive,L1,100000,sunil.desai@enterprise.co.in,+918410569063,Delhi,2016-01-06,Active,EMP-20150
+EMP-20052,Divya Reddy,Finance,Senior Executive,L1,100000,divya.reddy@enterprise.co.in,+917380936607,Noida,2020-07-02,Active,EMP-20085
+EMP-20053,Ananya Agarwal,Procurement,Senior Executive,L1,100000,ananya.agarwal@enterprise.co.in,+916353127805,Ahmedabad,2024-01-09,Active,EMP-20019
+EMP-20054,Aditya Bansal,Procurement,Manager,L2,200000,aditya.bansal@enterprise.co.in,+918546440642,Hyderabad,2018-06-08,Active,EMP-20036
+EMP-20055,Sneha Joshi,Compliance,Senior Manager,L3,1000000,sneha.joshi@enterprise.co.in,+916856019370,Bengaluru,2019-01-08,Active,EMP-20110
+EMP-20056,Divya Saxena,Admin,Executive,L1,50000,divya.saxena@enterprise.co.in,+919287672862,Ahmedabad,2023-08-12,Active,EMP-20103
+EMP-20057,Rajesh Saxena,Legal,Senior Executive,L1,100000,rajesh.saxena@enterprise.co.in,+918623146233,Delhi,2025-09-09,Active,EMP-20064
+EMP-20058,Neha Iyer,Procurement,Senior Manager,L3,1000000,neha.iyer@enterprise.co.in,+916258733313,Gurugram,2020-11-05,Active,EMP-20101
+EMP-20059,Sai Chatterjee,Operations,Director,L4,5000000,sai.chatterjee@enterprise.co.in,+918772264304,Bengaluru,2018-06-24,Active,EMP-20111
+EMP-20060,Sneha Agarwal,Procurement,Manager,L2,200000,sneha.agarwal@enterprise.co.in,+918526419210,Bengaluru,2020-12-27,Active,EMP-20069
+EMP-20061,Rohan Pandey,Finance,Senior Manager,L3,1000000,rohan.pandey@enterprise.co.in,+919654100011,Gurugram,2021-04-22,On Leave,EMP-20085
+EMP-20062,Reyansh Sharma,IT,Executive,L1,50000,reyansh.sharma@enterprise.co.in,+919813308770,Bengaluru,2022-03-17,Active,EMP-20128
+EMP-20063,Ashok Desai,Procurement,Manager,L2,200000,ashok.desai@enterprise.co.in,+916189920666,Delhi,2024-06-18,Active,EMP-20127
+EMP-20064,Shreya Mehta,Legal,Director,L4,5000000,shreya.mehta@enterprise.co.in,+917821913638,Mumbai,2016-11-26,Active,EMP-20101
+EMP-20065,Nisha Bose,Operations,Executive,L1,50000,nisha.bose@enterprise.co.in,+918735510161,Mumbai,2024-04-22,Active,EMP-20008
+EMP-20066,Rohan Chopra,Procurement,Manager,L2,200000,rohan.chopra@enterprise.co.in,+918195687732,Pune,2015-07-11,Active,EMP-20081
+EMP-20067,Isha Iyer,Legal,Director,L4,5000000,isha.iyer@enterprise.co.in,+919007234022,Kolkata,2022-01-30,Active,EMP-20085
+EMP-20068,Vijay Trivedi,Admin,Senior Executive,L1,100000,vijay.trivedi@enterprise.co.in,+916473752808,Ahmedabad,2015-05-07,Active,EMP-20071
+EMP-20069,Ananya Kumar,Procurement,Senior Manager,L3,1000000,ananya.kumar@enterprise.co.in,+917959551892,Gurugram,2020-07-03,Active,EMP-20101
+EMP-20070,Ananya Iyer,IT,Senior Executive,L1,100000,ananya.iyer@enterprise.co.in,+918098746334,Gurugram,2016-03-04,Active,EMP-20128
+EMP-20071,Nisha Banerjee,Admin,Manager,L2,200000,nisha.banerjee@enterprise.co.in,+916331867147,Gurugram,2021-08-30,Active,EMP-20078
+EMP-20072,Preeti Patel,Finance,Director,L4,5000000,preeti.patel@enterprise.co.in,+917797632929,Delhi,2018-05-19,Active,EMP-20004
+EMP-20073,Reyansh Reddy,Procurement,Senior Executive,L1,100000,reyansh.reddy@enterprise.co.in,+917192840842,Gurugram,2024-08-31,Active,EMP-20123
+EMP-20074,Saanvi Chatterjee,Finance,Manager,L2,200000,saanvi.chatterjee@enterprise.co.in,+919866865211,Mumbai,2019-10-28,Active,EMP-20072
+EMP-20075,Ashok Kapoor,IT,Director,L4,5000000,ashok.kapoor@enterprise.co.in,+918840856883,Delhi,2022-12-28,Active,EMP-20078
+EMP-20076,Aarav Singh,Legal,Executive,L1,50000,aarav.singh@enterprise.co.in,+916842407337,Delhi,2017-03-29,Active,EMP-20150
+EMP-20077,Sanjay Rao,Procurement,Senior Executive,L1,100000,sanjay.rao@enterprise.co.in,+916230096651,Noida,2021-11-19,Active,EMP-20001
+EMP-20078,Tara Desai,Admin,VP,L5,20000000,tara.desai@enterprise.co.in,+917907167816,Gurugram,2025-08-03,Active,
+EMP-20079,Deepak Chatterjee,IT,Manager,L2,200000,deepak.chatterjee@enterprise.co.in,+919696487363,Kolkata,2017-08-01,Active,EMP-20075
+EMP-20080,Anjali Kumar,Procurement,Director,L4,5000000,anjali.kumar@enterprise.co.in,+918718600962,Delhi,2019-04-27,Active,EMP-20101
+EMP-20081,Reyansh Pillai,Procurement,Senior Manager,L3,1000000,reyansh.pillai@enterprise.co.in,+917669095624,Bengaluru,2019-07-07,Active,EMP-20111
+EMP-20082,Isha Banerjee,Compliance,Manager,L2,200000,isha.banerjee@enterprise.co.in,+917454972157,Mumbai,2019-09-13,Active,EMP-20146
+EMP-20083,Ananya Naidu,IT,Senior Executive,L1,100000,ananya.naidu@enterprise.co.in,+916136007980,Bengaluru,2019-10-11,Active,EMP-20079
+EMP-20084,Pooja Bose,Procurement,Executive,L1,50000,pooja.bose@enterprise.co.in,+918375923202,Bengaluru,2016-01-22,Active,EMP-20120
+EMP-20085,Ramesh Naidu,Finance,VP,L5,20000000,ramesh.naidu@enterprise.co.in,+916332567078,Noida,2017-04-13,Active,
+EMP-20086,Nisha Pillai,Finance,Executive,L1,50000,nisha.pillai@enterprise.co.in,+916796666562,Delhi,2026-05-30,Active,EMP-20074
+EMP-20087,Sanjay Agarwal,Procurement,Executive,L1,50000,sanjay.agarwal@enterprise.co.in,+917752343469,Mumbai,2023-01-27,Active,EMP-20109
+EMP-20088,Vihaan Bose,Procurement,Executive,L1,50000,vihaan.bose@enterprise.co.in,+916659617504,Ahmedabad,2019-07-16,Active,EMP-20123
+EMP-20089,Rohan Agarwal,Procurement,Manager,L2,200000,rohan.agarwal@enterprise.co.in,+916107271077,Mumbai,2023-06-29,Active,EMP-20007
+EMP-20090,Rohan Desai,Finance,Manager,L2,200000,rohan.desai@enterprise.co.in,+916700680371,Chennai,2017-11-06,On Leave,EMP-20061
+EMP-20091,Anjali Menon,Finance,Manager,L2,200000,anjali.menon@enterprise.co.in,+916366437975,Bengaluru,2016-08-16,Resigned,EMP-20061
+EMP-20092,Saanvi Mehta,Admin,Manager,L2,200000,saanvi.mehta@enterprise.co.in,+916863483668,Ahmedabad,2021-10-17,Active,EMP-20078
+EMP-20093,Manoj Shah,Finance,Executive,L1,50000,manoj.shah@enterprise.co.in,+917885288693,Delhi,2023-03-27,Active,EMP-20028
+EMP-20094,Sai Das,Compliance,Executive,L1,50000,sai.das@enterprise.co.in,+916642277408,Kolkata,2024-04-23,Active,EMP-20117
+EMP-20095,Arjun Patel,Operations,Executive,L1,50000,arjun.patel@enterprise.co.in,+917208253782,Ahmedabad,2020-09-04,Active,EMP-20008
+EMP-20096,Anjali Malhotra,Finance,Senior Executive,L1,100000,anjali.malhotra@enterprise.co.in,+916028552920,Mumbai,2015-05-05,Active,EMP-20013
+EMP-20097,Manoj Joshi,Operations,Executive,L1,50000,manoj.joshi@enterprise.co.in,+916058499053,Ahmedabad,2017-01-10,Active,EMP-20008
+EMP-20098,Krishna Chopra,Finance,Manager,L2,200000,krishna.chopra@enterprise.co.in,+919832719905,Pune,2025-11-02,Active,EMP-20085
+EMP-20099,Vivaan Naidu,Finance,Senior Executive,L1,100000,vivaan.naidu@enterprise.co.in,+917301754643,Kolkata,2025-09-16,Active,EMP-20028
+EMP-20100,Anil Iyer,Finance,Senior Executive,L1,100000,anil.iyer@enterprise.co.in,+917718063779,Ahmedabad,2023-01-25,Active,EMP-20004
+EMP-20101,Anil Naidu,Procurement,VP,L5,20000000,anil.naidu@enterprise.co.in,+917371484142,Bengaluru,2016-04-18,Active,
+EMP-20102,Vivaan Mehta,Finance,Senior Manager,L3,1000000,vivaan.mehta@enterprise.co.in,+916156795817,Delhi,2020-02-12,On Leave,EMP-20013
+EMP-20103,Vijay Kumar,Admin,Director,L4,5000000,vijay.kumar@enterprise.co.in,+918164554792,Mumbai,2016-10-26,Active,EMP-20078
+EMP-20104,Vijay Kumar,Finance,Executive,L1,50000,vijay.kumar@enterprise.co.in,+917100642267,Delhi,2025-12-03,Active,EMP-20141
+EMP-20105,Priya Pillai,Procurement,Manager,L2,200000,priya.pillai@enterprise.co.in,+918388409482,Chennai,2023-04-23,Active,EMP-20116
+EMP-20106,Diya Pillai,Finance,Executive,L1,50000,diya.pillai@enterprise.co.in,+919903289785,Bengaluru,2015-01-20,Active,EMP-20004
+EMP-20107,Vihaan Shah,Admin,Senior Executive,L1,100000,vihaan.shah@enterprise.co.in,+917921128006,Chennai,2021-01-09,Active,EMP-20115
+EMP-20108,Priya Mehta,Operations,Manager,L2,200000,priya.mehta@enterprise.co.in,+916701452141,Chennai,2016-02-26,Active,EMP-20010
+EMP-20109,Preeti Patel,Procurement,Manager,L2,200000,preeti.patel@enterprise.co.in,+919656090348,Kolkata,2015-03-17,On Leave,EMP-20001
+EMP-20110,Ashok Naidu,Compliance,Director,L4,5000000,ashok.naidu@enterprise.co.in,+917992463504,Ahmedabad,2023-04-19,Active,EMP-20078
+EMP-20111,Divya Bansal,Procurement,VP,L5,20000000,divya.bansal@enterprise.co.in,+916062625962,Kolkata,2023-04-05,Active,
+EMP-20112,Shreya Sharma,Admin,Executive,L1,50000,shreya.sharma@enterprise.co.in,+918059458952,Bengaluru,2016-05-08,Active,EMP-20078
+EMP-20113,Sai Desai,Compliance,Manager,L2,200000,sai.desai@enterprise.co.in,+918456432253,Hyderabad,2017-04-04,Active,EMP-20117
+EMP-20114,Preeti Singh,Finance,Senior Manager,L3,1000000,preeti.singh@enterprise.co.in,+917271084034,Delhi,2020-07-05,Active,EMP-20004
+EMP-20115,Reyansh Banerjee,Admin,Manager,L2,200000,reyansh.banerjee@enterprise.co.in,+917688577747,Delhi,2018-12-14,Active,EMP-20103
+EMP-20116,Ishaan Kumar,Procurement,Senior Manager,L3,1000000,ishaan.kumar@enterprise.co.in,+918863447235,Hyderabad,2021-05-31,Active,EMP-20111
+EMP-20117,Anil Agarwal,Compliance,Senior Manager,L3,1000000,anil.agarwal@enterprise.co.in,+917432839623,Chennai,2017-01-24,Active,EMP-20110
+EMP-20118,Ashok Saxena,Procurement,Executive,L1,50000,ashok.saxena@enterprise.co.in,+919556335396,Hyderabad,2021-01-06,Active,EMP-20054
+EMP-20119,Shreya Patel,Finance,Senior Executive,L1,100000,shreya.patel@enterprise.co.in,+919478567033,Hyderabad,2017-02-09,Resigned,EMP-20006
+EMP-20120,Arjun Naidu,Procurement,Manager,L2,200000,arjun.naidu@enterprise.co.in,+919658284051,Bengaluru,2020-09-15,On Leave,EMP-20080
+EMP-20121,Kritika Agarwal,Procurement,Senior Executive,L1,100000,kritika.agarwal@enterprise.co.in,+918300017588,Kolkata,2022-09-30,Active,EMP-20007
+EMP-20122,Divya Nair,Finance,Executive,L1,50000,divya.nair@enterprise.co.in,+916158680073,Delhi,2023-08-06,Active,EMP-20013
+EMP-20123,Meera Malhotra,Procurement,Manager,L2,200000,meera.malhotra@enterprise.co.in,+919602370022,Ahmedabad,2023-05-09,Active,EMP-20116
+EMP-20124,Ananya Trivedi,Procurement,Executive,L1,50000,ananya.trivedi@enterprise.co.in,+919906654370,Ahmedabad,2019-09-10,Active,EMP-20120
+EMP-20125,Meera Gupta,Finance,Executive,L1,50000,meera.gupta@enterprise.co.in,+918534018321,Gurugram,2021-04-19,Active,EMP-20085
+EMP-20126,Saanvi Malhotra,Procurement,Manager,L2,200000,saanvi.malhotra@enterprise.co.in,+917281488137,Bengaluru,2022-12-01,Active,EMP-20081
+EMP-20127,Anil Agarwal,Procurement,Director,L4,5000000,anil.agarwal@enterprise.co.in,+918549545176,Chennai,2020-01-29,Active,EMP-20111
+EMP-20128,Sai Das,IT,Senior Manager,L3,1000000,sai.das@enterprise.co.in,+919767218098,Mumbai,2016-08-17,Active,EMP-20075
+EMP-20129,Tara Rao,Finance,Executive,L1,50000,tara.rao@enterprise.co.in,+919788120663,Mumbai,2018-03-02,Active,EMP-20102
+EMP-20130,Deepak Sharma,IT,Executive,L1,50000,deepak.sharma@enterprise.co.in,+918197700113,Ahmedabad,2022-01-19,Active,EMP-20075
+EMP-20131,Anil Desai,Finance,Manager,L2,200000,anil.desai@enterprise.co.in,+918965917698,Delhi,2026-03-12,Active,EMP-20004
+EMP-20132,Preeti Menon,Admin,Manager,L2,200000,preeti.menon@enterprise.co.in,+916479625394,Mumbai,2018-11-16,Active,EMP-20103
+EMP-20133,Suresh Chopra,IT,Senior Manager,L3,1000000,suresh.chopra@enterprise.co.in,+919687419851,Pune,2022-08-03,Active,EMP-20075
+EMP-20134,Ananya Joshi,Operations,Executive,L1,50000,ananya.joshi@enterprise.co.in,+918164470616,Mumbai,2019-08-14,Active,EMP-20008
+EMP-20135,Tara Nair,Procurement,Manager,L2,200000,tara.nair@enterprise.co.in,+917619842604,Bengaluru,2026-01-26,Active,EMP-20080
+EMP-20136,Aditya Verma,Finance,Executive,L1,50000,aditya.verma@enterprise.co.in,+919525049473,Bengaluru,2023-11-26,Active,EMP-20085
+EMP-20137,Kritika Mehta,Finance,Senior Executive,L1,100000,kritika.mehta@enterprise.co.in,+916669622107,Delhi,2015-02-04,Active,EMP-20043
+EMP-20138,Rohan Shah,Admin,Senior Executive,L1,100000,rohan.shah@enterprise.co.in,+918731833538,Noida,2016-02-23,Active,EMP-20023
+EMP-20139,Meera Verma,Operations,Manager,L2,200000,meera.verma@enterprise.co.in,+919479661216,Ahmedabad,2015-07-27,Resigned,EMP-20008
+EMP-20140,Sunil Gupta,Compliance,Senior Executive,L1,100000,sunil.gupta@enterprise.co.in,+919100780091,Delhi,2015-05-12,Active,EMP-20082
+EMP-20141,Ananya Singh,Finance,Manager,L2,200000,ananya.singh@enterprise.co.in,+919456146087,Bengaluru,2015-12-15,Active,EMP-20061
+EMP-20142,Suresh Menon,Operations,Senior Executive,L1,100000,suresh.menon@enterprise.co.in,+918568276155,Bengaluru,2016-07-14,Active,EMP-20010
+EMP-20143,Deepak Malhotra,Operations,Senior Executive,L1,100000,deepak.malhotra@enterprise.co.in,+916286167245,Mumbai,2017-04-10,Active,EMP-20139
+EMP-20144,Krishna Desai,Operations,Executive,L1,50000,krishna.desai@enterprise.co.in,+916695465914,Bengaluru,2019-12-06,Active,EMP-20008
+EMP-20145,Sai Nair,Operations,Senior Executive,L1,100000,sai.nair@enterprise.co.in,+917411909217,Mumbai,2022-11-15,Active,EMP-20059
+EMP-20146,Ramesh Reddy,Compliance,Senior Manager,L3,1000000,ramesh.reddy@enterprise.co.in,+918553483336,Kolkata,2017-11-13,Active,EMP-20110
+EMP-20147,Aditya Trivedi,Procurement,Senior Executive,L1,100000,aditya.trivedi@enterprise.co.in,+916402198685,Pune,2021-07-09,Active,EMP-20089
+EMP-20148,Neha Das,IT,Executive,L1,50000,neha.das@enterprise.co.in,+919880186341,Chennai,2016-09-10,Active,EMP-20128
+EMP-20149,Manoj Singh,Admin,Senior Executive,L1,100000,manoj.singh@enterprise.co.in,+916287349334,Bengaluru,2018-06-28,On Leave,EMP-20103
+EMP-20150,Kavya Sharma,Legal,Manager,L2,200000,kavya.sharma@enterprise.co.in,+918093551699,Pune,2016-08-11,Active,EMP-20064
