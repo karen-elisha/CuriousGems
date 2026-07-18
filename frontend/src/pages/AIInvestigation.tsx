@@ -121,7 +121,7 @@ export function AIInvestigation() {
             </div>
           </div>
           
-          <div className="p-8 relative z-10 font-mono text-sm leading-relaxed text-textMuted bg-[#070B14]/80 flex-1">
+          <div className="p-8 relative z-10 font-mono text-sm leading-relaxed text-textMuted bg-surface/80 flex-1">
             <AnimatePresence mode="wait">
               {!report && !loading && (
                 <motion.div 

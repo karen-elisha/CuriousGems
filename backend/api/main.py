@@ -6,7 +6,7 @@ import logging
 from contextlib import asynccontextmanager
 from pathlib import Path
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 
 from core.digital_twin import FinancialDigitalTwin
@@ -25,6 +25,7 @@ from .routers import (
     policies_router,
     reports_router,
     simulation_router,
+    system_router,
     transactions_router,
 )
 
@@ -128,9 +129,11 @@ app.include_router(chat_router)
 app.include_router(reports_router)
 app.include_router(transactions_router)
 app.include_router(policies_router)
+app.include_router(system_router)
 
 
 @app.get("/health", tags=["System"])
-async def health_check():
+async def health_check(request: Request):
     """Simple health check endpoint."""
-    return {"status": "ok", "service": "verigem-backend"}
+    initialized = hasattr(request.app.state, "twin") and request.app.state.twin is not None
+    return {"status": "ok", "service": "verigem-backend", "initialized": initialized}
