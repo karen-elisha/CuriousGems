@@ -9,5 +9,6 @@ Modules:
     digital_twin    - Central FinancialDigitalTwin orchestrator
     event_engine    - Immutable event sourcing, history, replay, timelines, snapshots
     rule_engine     - Business logic and compliance rule evaluation
+    risk_engine     - Hierarchical risk propagation engine
     runner          - Boot script to load, build, verify, and demonstrate
 """
