@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import { ThemeToggle } from './ThemeToggle';
 import { 
   LayoutDashboard, 
   Network, 
@@ -72,13 +73,18 @@ export function Sidebar() {
         ))}
       </nav>
       
-      <div className="p-4 border-t border-surfaceBorder bg-background/30 backdrop-blur-md">
-        <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-surfaceHover border border-surfaceBorder shadow-inner">
-          <div className="relative flex h-3 w-3">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-3 w-3 bg-cyan-500 shadow-[0_0_8px_rgba(6,182,212,0.8)]"></span>
+      <div className="p-4 border-t border-surfaceBorder bg-background/30 backdrop-blur-md space-y-3">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-surfaceHover border border-surfaceBorder shadow-inner flex-1">
+            <div className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-cyan-500 shadow-[0_0_8px_rgba(6,182,212,0.8)]"></span>
+            </div>
+            <span className="text-sm text-text font-medium tracking-wide">Twin: Active</span>
           </div>
-          <span className="text-sm text-text font-medium tracking-wide">Digital Twin: Active</span>
+          <div className="ml-2">
+            <ThemeToggle />
+          </div>
         </div>
       </div>
     </div>

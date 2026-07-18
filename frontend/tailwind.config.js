@@ -4,19 +4,20 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        background: '#F8FAFC', // Slate 50
-        surface: 'rgba(255, 255, 255, 0.7)', // Translucent white for glass
-        surfaceHover: 'rgba(241, 245, 249, 0.8)', // Slate 100
-        surfaceBorder: 'rgba(203, 213, 225, 0.4)', // Slate 300
-        primary: '#3B82F6', // Blue 500
+        background: 'var(--bg-background)',
+        surface: 'var(--bg-surface)',
+        surfaceHover: 'var(--bg-surface-hover)',
+        surfaceBorder: 'var(--border-surface)',
+        primary: 'var(--color-primary)',
         primaryGlow: 'rgba(59, 130, 246, 0.4)',
-        accent: '#8B5CF6', // Violet 500
-        danger: '#EF4444', // Red 500
-        text: '#0F172A', // Slate 900
-        textMuted: '#64748B', // Slate 500
+        accent: '#8B5CF6',
+        danger: 'var(--color-danger)',
+        text: 'var(--text-main)',
+        textMuted: 'var(--text-muted)',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
