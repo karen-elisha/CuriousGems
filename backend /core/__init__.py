@@ -10,5 +10,6 @@ Modules:
     event_engine    - Immutable event sourcing, history, replay, timelines, snapshots
     rule_engine     - Business logic and compliance rule evaluation
     risk_engine     - Hierarchical risk propagation engine
+    simulation_engine- What-If scenario testing with immutable branched states
     runner          - Boot script to load, build, verify, and demonstrate
 """
