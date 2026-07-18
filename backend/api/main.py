@@ -132,7 +132,7 @@ app.include_router(policies_router)
 app.include_router(system_router)
 
 
-@app.get("/health", tags=["System"])
+@app.get("/api/health", tags=["System"])
 async def health_check(request: Request):
     """Simple health check endpoint."""
     initialized = hasattr(request.app.state, "twin") and request.app.state.twin is not None
